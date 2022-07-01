@@ -20,16 +20,16 @@ Operation _$OperationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Operation {
-  @JsonKey(name: 'Id_Op')
-  String get idOperation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Tyoe')
+  @JsonKey(name: 'Id_op')
+  int? get idOperation => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Type')
   String? get typeOperation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Date_Op')
+  @JsonKey(name: 'DateOp')
   String? get dateOperation => throw _privateConstructorUsedError;
   @JsonKey(name: 'Montant')
   String? get montantOperation => throw _privateConstructorUsedError;
-  @JsonKey(name: 'Id_Compte')
-  String? get idCompte => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Id_Cpt')
+  int? get idCompte => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,11 +42,11 @@ abstract class $OperationCopyWith<$Res> {
   factory $OperationCopyWith(Operation value, $Res Function(Operation) then) =
       _$OperationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: 'Id_Op') String idOperation,
-      @JsonKey(name: 'Tyoe') String? typeOperation,
-      @JsonKey(name: 'Date_Op') String? dateOperation,
+      {@JsonKey(name: 'Id_op') int? idOperation,
+      @JsonKey(name: 'Type') String? typeOperation,
+      @JsonKey(name: 'DateOp') String? dateOperation,
       @JsonKey(name: 'Montant') String? montantOperation,
-      @JsonKey(name: 'Id_Compte') String? idCompte});
+      @JsonKey(name: 'Id_Cpt') int? idCompte});
 }
 
 /// @nodoc
@@ -69,7 +69,7 @@ class _$OperationCopyWithImpl<$Res> implements $OperationCopyWith<$Res> {
       idOperation: idOperation == freezed
           ? _value.idOperation
           : idOperation // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       typeOperation: typeOperation == freezed
           ? _value.typeOperation
           : typeOperation // ignore: cast_nullable_to_non_nullable
@@ -85,7 +85,7 @@ class _$OperationCopyWithImpl<$Res> implements $OperationCopyWith<$Res> {
       idCompte: idCompte == freezed
           ? _value.idCompte
           : idCompte // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
     ));
   }
 }
@@ -97,11 +97,11 @@ abstract class _$$_OperationCopyWith<$Res> implements $OperationCopyWith<$Res> {
       __$$_OperationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: 'Id_Op') String idOperation,
-      @JsonKey(name: 'Tyoe') String? typeOperation,
-      @JsonKey(name: 'Date_Op') String? dateOperation,
+      {@JsonKey(name: 'Id_op') int? idOperation,
+      @JsonKey(name: 'Type') String? typeOperation,
+      @JsonKey(name: 'DateOp') String? dateOperation,
       @JsonKey(name: 'Montant') String? montantOperation,
-      @JsonKey(name: 'Id_Compte') String? idCompte});
+      @JsonKey(name: 'Id_Cpt') int? idCompte});
 }
 
 /// @nodoc
@@ -126,7 +126,7 @@ class __$$_OperationCopyWithImpl<$Res> extends _$OperationCopyWithImpl<$Res>
       idOperation: idOperation == freezed
           ? _value.idOperation
           : idOperation // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int?,
       typeOperation: typeOperation == freezed
           ? _value.typeOperation
           : typeOperation // ignore: cast_nullable_to_non_nullable
@@ -142,7 +142,7 @@ class __$$_OperationCopyWithImpl<$Res> extends _$OperationCopyWithImpl<$Res>
       idCompte: idCompte == freezed
           ? _value.idCompte
           : idCompte // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as int?,
     ));
   }
 }
@@ -151,30 +151,30 @@ class __$$_OperationCopyWithImpl<$Res> extends _$OperationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Operation implements _Operation {
   const _$_Operation(
-      {@JsonKey(name: 'Id_Op') required this.idOperation,
-      @JsonKey(name: 'Tyoe') this.typeOperation,
-      @JsonKey(name: 'Date_Op') this.dateOperation,
+      {@JsonKey(name: 'Id_op') this.idOperation,
+      @JsonKey(name: 'Type') this.typeOperation,
+      @JsonKey(name: 'DateOp') this.dateOperation,
       @JsonKey(name: 'Montant') this.montantOperation,
-      @JsonKey(name: 'Id_Compte') this.idCompte});
+      @JsonKey(name: 'Id_Cpt') this.idCompte});
 
   factory _$_Operation.fromJson(Map<String, dynamic> json) =>
       _$$_OperationFromJson(json);
 
   @override
-  @JsonKey(name: 'Id_Op')
-  final String idOperation;
+  @JsonKey(name: 'Id_op')
+  final int? idOperation;
   @override
-  @JsonKey(name: 'Tyoe')
+  @JsonKey(name: 'Type')
   final String? typeOperation;
   @override
-  @JsonKey(name: 'Date_Op')
+  @JsonKey(name: 'DateOp')
   final String? dateOperation;
   @override
   @JsonKey(name: 'Montant')
   final String? montantOperation;
   @override
-  @JsonKey(name: 'Id_Compte')
-  final String? idCompte;
+  @JsonKey(name: 'Id_Cpt')
+  final int? idCompte;
 
   @override
   String toString() {
@@ -220,30 +220,30 @@ class _$_Operation implements _Operation {
 
 abstract class _Operation implements Operation {
   const factory _Operation(
-      {@JsonKey(name: 'Id_Op') required final String idOperation,
-      @JsonKey(name: 'Tyoe') final String? typeOperation,
-      @JsonKey(name: 'Date_Op') final String? dateOperation,
+      {@JsonKey(name: 'Id_op') final int? idOperation,
+      @JsonKey(name: 'Type') final String? typeOperation,
+      @JsonKey(name: 'DateOp') final String? dateOperation,
       @JsonKey(name: 'Montant') final String? montantOperation,
-      @JsonKey(name: 'Id_Compte') final String? idCompte}) = _$_Operation;
+      @JsonKey(name: 'Id_Cpt') final int? idCompte}) = _$_Operation;
 
   factory _Operation.fromJson(Map<String, dynamic> json) =
       _$_Operation.fromJson;
 
   @override
-  @JsonKey(name: 'Id_Op')
-  String get idOperation => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Id_op')
+  int? get idOperation => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Tyoe')
+  @JsonKey(name: 'Type')
   String? get typeOperation => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Date_Op')
+  @JsonKey(name: 'DateOp')
   String? get dateOperation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'Montant')
   String? get montantOperation => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'Id_Compte')
-  String? get idCompte => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Id_Cpt')
+  int? get idCompte => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_OperationCopyWith<_$_Operation> get copyWith =>

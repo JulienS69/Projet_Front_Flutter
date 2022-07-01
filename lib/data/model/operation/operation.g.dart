@@ -7,18 +7,18 @@ part of 'operation.dart';
 // **************************************************************************
 
 _$_Operation _$$_OperationFromJson(Map<String, dynamic> json) => _$_Operation(
-      idOperation: json['Id_Op'] as String,
-      typeOperation: json['Tyoe'] as String?,
-      dateOperation: json['Date_Op'] as String?,
+      idOperation: json['Id_op'] as int?,
+      typeOperation: json['Type'] as String?,
+      dateOperation: json['DateOp'] as String?,
       montantOperation: json['Montant'] as String?,
-      idCompte: json['Id_Compte'] as String?,
+      idCompte: json['Id_Cpt'] as int?,
     );
 
 Map<String, dynamic> _$$_OperationToJson(_$_Operation instance) =>
     <String, dynamic>{
-      'Id_Op': instance.idOperation,
-      'Tyoe': instance.typeOperation,
-      'Date_Op': instance.dateOperation,
+      'Id_op': instance.idOperation,
+      'Type': instance.typeOperation,
+      'DateOp': instance.dateOperation,
       'Montant': instance.montantOperation,
-      'Id_Compte': instance.idCompte,
+      'Id_Cpt': instance.idCompte,
     };

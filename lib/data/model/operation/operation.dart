@@ -6,17 +6,15 @@ part 'operation.g.dart';
 @Freezed(makeCollectionsUnmodifiable: false)
 class Operation with _$Operation {
   const factory Operation({
-    @JsonKey(name: 'Id_Op') required String idOperation,
-    @JsonKey(name: 'Tyoe') String? typeOperation,
-    @JsonKey(name: 'Date_Op') String? dateOperation,
+    @JsonKey(name: 'Id_op') int? idOperation,
+    @JsonKey(name: 'Type') String? typeOperation,
+    @JsonKey(name: 'DateOp') String? dateOperation,
     @JsonKey(name: 'Montant') String? montantOperation,
-    @JsonKey(name: 'Id_Compte') String? idCompte,
+    @JsonKey(name: 'Id_Cpt') int? idCompte,
   }) = _Operation;
 
   factory Operation.empty() {
-    return Operation(
-      idOperation: "",
-    );
+    return const Operation();
   }
 
   factory Operation.fromJson(Map<String, dynamic> json) =>
