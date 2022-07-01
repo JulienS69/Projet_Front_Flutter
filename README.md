@@ -58,7 +58,7 @@ Pré-requis : Avoir installer le SDK Flutter sur votre PC (https://docs.flutter.
 
 Ouvrir le projet "Projet_Front_Flutter-master" et lancer le vous devriez aprecevoir le même résultat que la vidéo ci-dessous : 
 
-
+https://youtu.be/MzSGWkWDl0U
 
 Enjoy !
 
