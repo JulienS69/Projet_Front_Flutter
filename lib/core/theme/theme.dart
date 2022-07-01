@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'color_theme.dart';
 
 final ThemeData myTheme = ThemeData(
-  cardTheme: CardTheme(
+  cardTheme: const CardTheme(
       shadowColor: Color(0x4D9E9E9E),
       elevation: 4,
       shape: RoundedRectangleBorder(

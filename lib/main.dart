@@ -25,9 +25,7 @@ FutureOr<SentryEvent?> beforeSend(SentryEvent event, {dynamic hint}) async {
 void main() async {
   await initHttpClients();
 
-  String _dsn = kDebugMode
-      ? ''
-      : 'https://f53bbcb615034f89af9bb5ca7189c7a9@sentry.lebureauvirtuel.fr/6';
+  String _dsn = kDebugMode ? '' : '';
 
   await SentryFlutter.init(
     (options) {
@@ -38,13 +36,13 @@ void main() async {
       options.beforeSend = beforeSend;
     },
     appRunner: () => runApp(
-      MyApp(),
+      const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({
+  const MyApp({
     Key? key,
   }) : super(key: key);
 
@@ -52,7 +50,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       scrollBehavior: MyCustomScrollBehavior(),
-      title: 'XEFI',
+      title: 'Liste des opérations',
       theme: myTheme,
       darkTheme: myTheme,
       themeMode: ThemeMode.light,
@@ -61,16 +59,16 @@ class MyApp extends StatelessWidget {
       initialRoute: Routes.initialRoute,
       getPages: Nav.routes,
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
         //SfGlobalLocalizations.delegate,
       ],
-      supportedLocales: [
-        const Locale('fr', 'FR'),
-        const Locale('en', 'EN'),
-        const Locale('de', 'DE'),
+      supportedLocales: const [
+        Locale('fr', 'FR'),
+        Locale('en', 'EN'),
+        Locale('de', 'DE'),
       ],
     );
   }

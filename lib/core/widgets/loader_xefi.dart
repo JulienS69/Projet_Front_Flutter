@@ -47,7 +47,7 @@ class _LoaderDailyAppsState extends State<LoaderDailyApps>
               );
             },
             child: Image.asset(
-              'assets/logo/dailyapps_icon.png',
+              'assets/logo/logo.jpg',
               height: 75,
               width: 75,
             ),
